@@ -101,7 +101,7 @@ error[E0119]: conflicting implementations of trait `Trait` for type `&mut _`:
 ```
 
 编译器不允许我们为`&T`和`&mut T`实现`Trait`，因为这样会与为`T`实现的`Trait`冲突，
-`T`本身已经包含了所有`T`和`&mut T`。下面的代码能够如愿编译，因为`&T`和`&mut T`是不相交的：
+`T`本身已经包含了所有`&T`和`&mut T`。下面的代码能够如愿编译，因为`&T`和`&mut T`是不相交的：
 
 ```rust
 trait Trait {}
